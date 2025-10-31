@@ -16,6 +16,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <header className="header">
             <div className="logo">Soulful <span className="badge">Brush</span> Studios</div>
             <nav>
+              <a href="/products">Products</a>
+              &nbsp;·&nbsp;
               <a href="https://heart-soul-by-kfb.myshopify.com" target="_blank" rel="noopener">Shopify Store</a>
             </nav>
           </header>

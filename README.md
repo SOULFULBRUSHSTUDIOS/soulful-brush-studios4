@@ -18,3 +18,13 @@ This project is ready to import to **Vercel** (or push to GitHub then import).
 - TypeScript is enabled. Vercel will install `typescript` and the `@types/*` packages from `devDependencies`.
 - GA4 will initialize automatically if `NEXT_PUBLIC_GA4_ID` is set.
 - Shopify link is in the header and on the home page cards.
+
+
+## Product Catalog from CSV
+- Put your exported Shopify CSV at `data/products.csv` (this repo already includes a sample with 3 items).
+- Deploy. The page **/products** will render a grid from that CSV at build-time.
+- Each item links to your Shopify storefront search by handle.
+- GA4 event `select_item` fires on clicks (if `NEXT_PUBLIC_GA4_ID` is set).
+
+Columns used (Shopify export compatible):
+- Handle, Title, Vendor, Type, Tags, Variant SKU, Variant Price, Variant Inventory Qty, Image Src

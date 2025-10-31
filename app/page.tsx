@@ -19,13 +19,15 @@ export default function Page(){
       </div>
     </section>
 
-    {process.env.NEXT_PUBLIC_SHOW_ANALYTICS==='true' && (<section className="section analytics push">
+    {process.env.NEXT_PUBLIC_SHOW_ANALYTICS==='true' && (
+    <section className="section analytics push">
       <div className="inner">
         <h2>Business Analytics</h2>
         <p>We aggregate Shopify, Printify, and website metrics. GA4 connects here once your measurement ID is added in Vercel.</p>
         <code>Set <strong>NEXT_PUBLIC_GA4_ID</strong> in Project → Settings → Environment Variables</code>
       </div>
-    </section>)}
+    </section>
+    )}
 
     <section className="section contact push">
       <div className="inner">

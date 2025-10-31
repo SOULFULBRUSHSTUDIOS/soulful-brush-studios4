@@ -1,10 +1,10 @@
-import { loadAll, byVendor } from '../../../../lib/catalog';
+import { loadAll, byTag } from '../../../../lib/catalog';
 export const dynamic = 'force-dynamic';
-export default function VendorCollection({ params }:{ params: { vendor: string } }){
+export default function TagCollection({ params }:{ params: { tag: string } }){
   const all = loadAll();
-  const items = byVendor(all, params.vendor);
+  const items = byTag(all, params.tag);
   return (<main>
-    <h1>Vendor: {params.vendor}</h1>
+    <h1>Tag: #{params.tag}</h1>
     <section className="cardgrid">
       {items.map(p=>(<article className="card" key={p.handle}>
         <img className="productImg" src={p.image||''} alt={p.title}/>
